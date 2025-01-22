@@ -1,0 +1,81 @@
+/* Horizontal Headline Style */
+.horizontal-headline {
+  font-family: 'Didot', serif;
+  font-size: 36px;
+  font-weight: normal;
+  color: #333;
+  text-align: center;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, background-color 0.3s;
+
+  /* Flexbox for Centering */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; 
+  height: 80px; 
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.horizontal-headline:hover {
+  background-color: rgba(255, 239, 213, 0.9);
+  transform: scale(1.05);
+}
+
+
+/* General Container */
+.scroll-container {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-wrap: wrap;
+}
+
+/* Content Section */
+.content-section {
+  flex-grow: 1;
+  padding: 20px;
+}
+
+.content-block {
+  margin-bottom: 50px;
+  padding: 20px;
+  background-color: rgba(240, 240, 240, 0.9);
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: transform 0.3s, background-color 0.3s;
+}
+
+.content-block h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.content-block p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Highlight Effect */
+.content-block.highlighted {
+  transform: scale(1.05);
+  background-color: rgba(255, 239, 213, 0.9);
+  border-color: rgba(255, 165, 0, 0.8);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .horizontal-headline {
+    font-size: 28px;
+    margin-top: 20px;
+  }
+
+  .content-block {
+    margin-bottom: 30px;
+  }
+}

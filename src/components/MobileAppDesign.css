@@ -1,0 +1,146 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+  background-color: #111;
+}
+
+.mobile-app-container {
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  background: #222;
+  height: 100vh;
+}
+
+header {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.gooey-text {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  animation: fadeInScale 1.5s ease-in-out;
+  position: relative;
+  z-index: 3;
+}
+
+.gooey-text-subtitle {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #ccc;
+  animation: fadeInScale 2s ease-in-out;
+}
+
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.parallax-container {
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  overflow: hidden;
+}
+
+.parallax-video {
+  width: 110%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: -5%;
+  z-index: 0;
+}
+
+.parallax-image-gallery {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.parallax-image {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .gooey-text {
+    font-size: 1.5rem;
+  }
+
+  .gooey-text-subtitle {
+    font-size: 1rem;
+  }
+
+  .parallax-image {
+    height: 50vh;
+  }
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+.extra-description {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #222;
+  border-radius: 8px;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  max-width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.talented-heading {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.talented-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  line-height: 1.4;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.talented-description:last-child {
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .talented-heading {
+    font-size: 1.4rem;
+  }
+
+  .talented-description {
+    font-size: 0.85rem;
+  }
+}

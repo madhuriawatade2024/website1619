@@ -1,0 +1,277 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background-color: #121212;
+  color: white;
+  overflow-x: hidden;
+}
+
+.hero-container {
+  position: relative;
+  height: 100vh;
+  background: url('../assets/my-hero-gif.gif') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: white;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  animation: focus-in-out 3s ease-in-out infinite;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: white;
+  animation: focus-in-out 3s ease-in-out infinite;
+  animation-delay: 0.5s;
+}
+
+.cta-button {
+  position: relative;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 30px;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.4s ease-in-out;
+}
+
+.cta-button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.6));
+  z-index: -1;
+  transition: transform 0.5s ease-in-out;
+}
+
+.cta-button:hover {
+  color: #ff6f61;
+  border-color: #ff6f61;
+}
+
+.cta-button:hover::before {
+  transform: translateX(100%);
+}
+
+.cta-button:active {
+  background: rgba(255, 111, 97, 0.1);
+  color: #ff4a3d;
+  border-color: #ff4a3d;
+}
+
+.download-cv-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-size: 14px;
+  font-family: "Titillium Web", sans-serif;
+  text-decoration: none;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 0.3s ease;
+  z-index: 10;
+  border: 2px solid white;
+}
+
+.download-cv-button i {
+  font-size: 16px;
+}
+
+.download-cv-button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: scale(1.05);
+}
+
+.scroll-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: white;
+  background-color: #1a1a1a;
+}
+
+.scrollable-gif {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.scrollable-gif.hold-animation {
+  transform: scale(1.1);
+  filter: brightness(0.8);
+}
+
+.animated-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.animated-text h2 {
+  font-family: "Courier New", monospace;
+  font-size: 4rem;
+  color: #05fcdf;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #05fcdf;
+  animation: typing 6s steps(40, end) 1, blink-caret 0.6s step-end infinite, pulse 2s ease-in-out infinite, fadeInOut 3s ease-in-out infinite, colorChange 4s linear infinite;
+}
+
+.animated-text p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  line-height: 1.8;
+  margin-top: 1rem;
+  color: white;
+  animation: glow 2s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: #05fcdf;
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+}
+
+@keyframes fadeInOut {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #05fcdf;
+  }
+  25% {
+    color: #ff6347;
+  }
+  50% {
+    color: #ffa500;
+  }
+  75% {
+    color: #32cd32;
+  }
+  100% {
+    color: #05fcdf;
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 10px #05fcdf, 0 0 20px #05fcdf;
+  }
+  50% {
+    text-shadow: 0 0 30px #ff6347, 0 0 40px #ff6347;
+  }
+}
+
+@keyframes focus-in-out {
+  0%, 100% {
+    filter: blur(3px);
+    opacity: 0;
+  }
+  50% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 1200px) {
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+}

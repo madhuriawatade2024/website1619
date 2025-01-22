@@ -1,0 +1,124 @@
+.hobbies-timeline {
+  text-align: center;
+  background: linear-gradient(135deg, #121212, #000);
+  padding: 50px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-title {
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 40px;
+  position: relative;
+  animation: flipFlop 2s infinite ease-in-out;
+  display: inline-block;
+}
+
+@keyframes flipFlop {
+  0% {
+    transform: rotateX(0deg);
+  }
+  25% {
+    transform: rotateX(90deg);
+  }
+  50% {
+    transform: rotateX(180deg);
+  }
+  75% {
+    transform: rotateX(270deg);
+  }
+  100% {
+    transform: rotateX(360deg);
+  }
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+  margin: 0 auto;
+  overflow: hidden;
+  position: relative;
+  width: 80%;
+  background: rgba(91, 89, 84, 0.5);
+  border-radius: 20px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+}
+
+.timeline-item {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  animation: slideIn 1.5s ease-in-out;
+}
+
+.timeline-icon {
+  font-size: 4rem;
+  margin-bottom: 20px;
+  animation: bounce 1.5s infinite ease-in-out, colorChange 2s ease-in-out infinite;
+}
+
+.timeline-year {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.timeline-hobby {
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    color: #ff6347;
+  }
+  25% {
+    color: #32cd32;
+  }
+  50% {
+    color: #ffa500;
+  }
+  75% {
+    color: #9370db;
+  }
+  100% {
+    color: #00bfff;
+  }
+}
